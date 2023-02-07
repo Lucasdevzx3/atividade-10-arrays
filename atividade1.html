@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atividade 1</title>
+  </head>
+  <body>
+    <!--
+        Considere o seguinte array:
+        const salarios = [5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99,
+        1290.00, 15000.00];
+        Imprima no console o índice do primeiro salário maior que
+        7.500 utilizando o findIndex
+        Imprima no console a lista de salários em ordem crescente
+        utilizando o sort
+        Imprima no console a lista de salários em ordem decrescente
+        utilizando o sort
+        Utilize a função Some, para descobrir se existe algum salário
+        superior a 10.000, imprima verdadeiro no console caso exista,
+        caso contrário falso
+        Crie uma nova lista filtrada com os salários que são maior que
+        8.000 utilizando o filter
+
+        const salario => salario > 7500 pra chegar em 7590.1
+        salario ordem crescente sort (a,b) => a - b
+        salario ordem decrescente sort (a,b) => b - a
+        salario maior salarios.some (salario) => salario > 10000
+        log para mostrar se salario maior que 10000 = true
+         (salario) => salario > 8000
+         log que sao maior q 8000
+    -->
+    <script>
+      const salarios = [
+        5000.0, 5460.5, 3452.0, 6900.0, 7590.1, 8012.99, 1290.0, 15000.0,
+      ];
+
+      //  primeiro salário maior que 7.500
+      const indiceMaior7500 = salarios.findIndex((salario) => salario > 7500);
+      console.log(
+        `Índice do primeiro salário maior que 7.500: ${indiceMaior7500}`
+      );
+
+      // lista de salários em ordem crescente
+      const salariosOrdemCrescente = [...salarios].sort((a, b) => a - b);
+      console.log(`Salários em ordem crescente: ${salariosOrdemCrescente}`);
+
+      // lista de salários em ordem decrescente
+      const salariosOrdemDecrescente = [...salarios].sort((a, b) => b - a);
+      console.log(`Salários em ordem decrescente: ${salariosOrdemDecrescente}`);
+
+      // verifica salário superior a 10.000
+      const existeSalarioMaior10000 = salarios.some(
+        (salario) => salario > 10000
+      );
+      console.log(
+        `Existe algum salário superior a 10.000: ${existeSalarioMaior10000}`
+      );
+
+      // lista filtrada com os salários que são maior que 8.000
+      const salariosMaior8000 = salarios.filter((salario) => salario > 8000);
+      console.log(`Salários que são maior que 8.000: ${salariosMaior8000}`);
+    </script>
+  </body>
+</html>
